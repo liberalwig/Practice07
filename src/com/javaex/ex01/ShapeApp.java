@@ -11,7 +11,6 @@ public class ShapeApp {
 
 	public static void main(String[] args) {
 
-		Shape s = new Shape("빨강");
 		Circle c1 = new Circle("녹색", 10);
 		Rectangle r1 = new Rectangle("빨강", 4, 4);
 		Shape sr1 = new Rectangle("빨강", 4, 4);
@@ -19,8 +18,13 @@ public class ShapeApp {
 		//sr1을 그리는 메소드 호출
 		
 		//sr1의 가로크기 출력
-		
+		System.out.println("sr1의 가로는 " + ((Rectangle)sr1).getWidth() + "입니다.");
 	}
 }
 
 	
+/*
+<1>추상화된 부모클래스는 객체를 입력할 수 없으므로 14행//Shape s = new Shape("빨강"); 은 오류라 삭제
+<2>Rectangle의 메소드일반과 부모클래스의 메소드일반에 겹치는 메소드가 없으므로 용어변경from showInfo to draw
+<3>상속받은 자식클래스에서 가로길이라는 변수를 꺼내오려면, gs를 이용해야 하므로 gs추가해서 소환. 주의.get아니라set
+*/
