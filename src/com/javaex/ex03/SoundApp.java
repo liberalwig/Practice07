@@ -1,3 +1,5 @@
+//2021.12.4(토)20:55
+
 package com.javaex.ex03;
 
 public class SoundApp {
@@ -10,7 +12,7 @@ public class SoundApp {
     }
 
     public static void printSound( Soundable soundable ) {
-        //구현
+        System.out.println(soundable.sound());
     }
     
 }
